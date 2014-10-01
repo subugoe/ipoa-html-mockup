@@ -1,0 +1,176 @@
+body {
+	// background-color: lighten(#E8E8E8, 50);
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+
+.head {
+	width: 100%;
+	background-color: $color-default;
+	border-bottom: 1px solid white;
+	.claim {
+		display: none;
+		@include media-query('tablet-and-up') {
+			display: inline-block;
+		}
+	}
+	.js-head--pinned > .page-title {
+		@include media-query("desk") {
+			@include push(25%);
+		}
+	}
+	.page-title {
+		@include media-query("phone") {
+			text-align: center;
+		}
+	}
+}
+
+.nav {
+	li {
+		margin: 0;
+	}
+}
+
+.content {
+	@include media-query("desk") {
+		._header {
+			@include sub-layout--right();
+		}
+	}
+	@include media-query("tablet") {
+		.text {
+			padding-left: 5%;
+		}
+	}
+	@include media-query("notebook") {
+		.text {
+			padding-left: 10%;
+		}
+	}
+}
+
+.footer {
+	background-color: $color-default;
+	border-bottom: 1px solid white;
+	.info {
+		@include media-query("tablet-and-up") {
+			text-align: right;
+		}
+	}
+}
+
+
+
+.head,
+.nav,
+.content,
+.more,
+.footer,
+.asdf {
+	padding: 0 $padding-phone 0 $padding-phone;
+	@include media-query("tablet") {
+    padding: 0 $padding-tablet 0 $padding-tablet;
+  }
+  @include media-query("notebook") {
+    padding: 0 $padding-notebook 0 $padding-notebook;
+  }
+  @include media-query("desk") {
+    padding: 0 $padding-desk 0 $padding-desk;
+  }
+  @include media-query("huge") {
+    padding: 0 $padding-huge 0 $padding-huge;
+  }	
+}
+
+
+.headroom {
+	position: fixed;
+}
+
+.js-head,
+.page-title {
+	-webkit-transition: transform 200ms linear;
+  -moz-transition: transform 200ms linear;
+  -o-transition: transform 200ms linear;
+	transition: transform 200ms linear;
+}
+.js-head--pinned {
+	transform: translateY(0%);
+}
+.js-head--unpinned {
+	transform: translateY(-50%);
+}
+
+.helper__footer {
+	background-color: white;
+	position: relative;
+  z-index: 1;
+}
+
+.footer-hidden {
+	position: relative;
+  z-index: -2;
+  .asdf {
+  	@include media-query("notebook-and-up") {
+    	position: fixed;
+    	z-index: -1;
+    	bottom:0;
+  	}
+  }
+}
+
+img {
+	max-width: 100%;
+}
+
+html {
+	background: url("../img/bg-1.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.start-1{
+	.ic-btn {
+		color: black;
+		background-color: hsla(0%,100%,100%,0.25);
+		border-color: hsla(0%,100%,100%,0.5);
+	}
+	.logo {
+		text-align: center;
+		@include media-query("notebook-and-up") {
+			text-align: right;
+		}
+	}
+	.name {
+		font-size: 175%;
+		display: none;
+		@include media-query("notebook-and-up") {
+			display: inline-block;
+		}
+	}
+	.start__menu {
+		display: none;
+		@include media-query("notebook-and-up") {
+			display: inline-block;
+		}
+	}
+	.start__allgemein,
+	.start__wissenswertes,
+	.start__faecher {
+		margin: 20px 15px 0 15px;
+	}
+	.start__info {
+		position: absolute;
+		width: 100%;
+		bottom: 20px;
+		text-align: center;
+		@include media-query("notebook-and-up") {
+			text-align: right;
+			padding-right: 20px;
+		}
+	}
+}

@@ -1,0 +1,9 @@
+'initialize':
+  - 'copy:picturefill'
+  - 'copy:htmlinspector'
+  - 'copy:fira'
+  - 'copy:jquery'
+  - 'copy:jqueryAdditionalFiles'
+
+'devWatch':
+  - 'sass'

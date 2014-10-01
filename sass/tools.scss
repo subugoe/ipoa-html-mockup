@@ -1,0 +1,47 @@
+.ul--reset {
+	padding-left: 15px;
+	margin: 0;
+}
+
+.text--large {
+	font-size: ($inuit-base-font-size / 16px) * 1.2em;
+}
+
+.text--small {
+	font-size: ($inuit-base-font-size / 16px) * 0.8em;
+}
+
+.text--tiny {
+	font-size: ($inuit-base-font-size / 16px) * 0.65em;
+}
+
+.text--bold {
+	font-weight: bold;
+}
+
+@mixin push($howmuch) {
+	position: relative;
+	transform: translateX($howmuch);
+}
+
+.text--very-bright {
+	color: $color-very-bright;
+}
+
+.margin--reset {
+	margin: 0;
+}
+
+@mixin sub-layout--right() {
+	text-align: right;
+}
+
+.shift {
+	@include media-query("desk") {
+		@include push(25%);
+	}
+}
+
+.border--big {
+	border-width: 2px;
+}
