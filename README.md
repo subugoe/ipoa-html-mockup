@@ -2,7 +2,7 @@ ipoa-html-mockup
 ================
 This repository holds the HTML/CSS/Code for a mockup website to show stuff to the client.
 
-See gh-pages.
+See gh-pages and public site: http://subugoe.github.io/ipoa-html-mockup/
 
 # Requirements
 
