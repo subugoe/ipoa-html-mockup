@@ -1,3 +1,5 @@
+Please move to https://github.com/subugoe/ipoa-html-template
+
 ipoa-html-mockup
 ================
 This repository holds the HTML/CSS/Code for a mockup website to show stuff to the client.
